@@ -15,106 +15,12 @@ a {
   right: 0;
   bottom: 0;
 
-  aside {
+  .main {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    left: 180px;
+    right: 0;
 
-    width: 180px;
-
-    background-color: #171717;
-    color: #686868;
-    text-align: center;
-    overflow: hidden;
-
-    .logo {
-      padding: 31px 0;
-
-      text-align: center;
-
-      .image-wrapper {
-        padding: 0 38px;
-
-        img {
-          text-align: center;
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      figcaption: {
-        display: inline-block;
-        text-align: center;
-
-        font-size: 14px;
-      }
-    }
-
-    .tabs {
-      width: 100%;
-
-      ul {
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
-        text-align: center;
-      }
-
-      .tab {
-        &.active {
-          .tab-name {
-            color: #000;
-            background-color: #fff;
-          }
-        }
-
-        .tab-name {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          height: 54px;
-          padding: 7px 0;
-          border-top: 1px solid #1f1f1f;
-          border-bottom: 1px solid #1f1f1f;
-
-          color: #fff;
-
-          h3 {
-            margin: 0;
-            font-size: 16px;
-          }
-        }
-
-        .content {
-          max-height: 320px;
-          overflow: scroll;
-
-          li {
-            padding: 9px 0;
-
-            &:hover {
-              background-color: #222;
-
-              a {
-                color: #fff;
-              }
-            }
-
-            a {
-              color: #686868;
-            }
-          }
-        }
-
-
-      }
-    }
-
-    .footer {
-      margin-top: 20px;
-    }
+    padding-top: 20px;
   }
 
 }

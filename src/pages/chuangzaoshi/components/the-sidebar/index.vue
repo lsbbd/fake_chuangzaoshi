@@ -23,7 +23,7 @@
           </div>
           <ul class="content" v-if="currentTab === ti">
             <li v-for="(item, ii) in tab.list">
-              <a href="" class="czs" :class="item.iconName">{{ item.name }}</a>
+              <a class="czs" :class="item.iconName">{{ item.name }}</a>
             </li>
           </ul>
         </li>

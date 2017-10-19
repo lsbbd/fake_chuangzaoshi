@@ -4,7 +4,9 @@
     <the-sidebar></the-sidebar>
 
     <div class="main">
-
+      <div class="container">
+        <toolbar></toolbar>
+      </div>
     </div>
   </div>
 </template>
@@ -12,10 +14,12 @@
 <script>
   import Mock from 'mockjs'
   import theSidebar from './components/the-sidebar'
+  import toolbar from './components/toolbar'
 
   export default {
     components: {
-      theSidebar
+      theSidebar,
+      toolbar
     },
 
     data() {
