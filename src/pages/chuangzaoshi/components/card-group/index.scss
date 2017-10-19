@@ -1,0 +1,68 @@
+@import "../../../../style/_variable.scss";
+@import "../../../../style/_mixins.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.card-group {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+
+  @media screen and (max-width: $xs-max-width) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  background-color: #f9f9f9;
+
+  .catalog {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .wrapper {
+      display: inline-block;
+
+      padding: 8px 12px;
+
+      font-size: 12px;
+      font-weight: bolder;
+      color: #333;
+      background-color: #fff;
+      box-shadow: 0 3px 3px rgba(170,170,170,0.2);
+
+      span:before {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .col-wrapper {
+    @include clearfix;
+    margin: 0 -10px;
+
+    .col {
+      float: left;
+      padding: 0 10px;
+      margin-bottom: 20px;
+
+      @media screen and (max-width: $xs-max-width) {
+        width: 100%;
+      }
+
+      @media screen and (min-width: $sm-min-width) {
+        width: 50%;
+      }
+
+      @media screen and (min-width: $md-min-width) {
+        width: 33.333333%;
+      }
+
+      @media screen and (min-width: $lg-min-width) {
+        width: 25%;
+      }
+    }
+  }
+}

@@ -9,23 +9,28 @@
     <div class="main">
       <div class="wrapper">
         <toolbar></toolbar>
+        <the-tab></the-tab>
 
+        <card-group></card-group>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Mock from 'mockjs'
   import theSidebar from './components/the-sidebar'
   import toolbar from './components/toolbar'
   import theHeader from './components/the-header'
+  import theTab from './components/the-tab'
+  import cardGroup from './components/card-group'
 
   export default {
     components: {
       theSidebar,
       toolbar,
-      theHeader
+      theHeader,
+      theTab,
+      cardGroup
     },
 
     data() {
