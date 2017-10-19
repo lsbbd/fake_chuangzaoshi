@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="toolbar">
+  <div class="toolbar" @mouseenter="stop()" @mouseleave="start()">
     <div class="title">
       <h3>
        <span class="scz czs-square"></span>
@@ -7,7 +7,7 @@
       </h3>
     </div>
     <div class="scroll-bar hidden-xs">
-      <div class="content" @mouseenter="stop()" @mouseleave="start()">
+      <div class="content">
         <ul :style="style">
           <li v-for="(ad, index) in adList">
             <span class="desc">{{ ad.desc }}</span>
@@ -103,7 +103,7 @@
           } else {
             this.nextAd()
           }
-        }, 2000)
+        }, this.interval)
       },
 
       // 停止滚动

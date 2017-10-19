@@ -33,6 +33,10 @@ ul {
       margin: 0;
       font-size: 16px;
     }
+
+    small {
+      font-size: 14px;
+    }
   }
 
   .scroll-bar {
@@ -72,12 +76,15 @@ ul {
 
           .desc {
             display: inline-block;
-            max-width: 400px;
+
+            max-width: 250px;
             height: 20px;
             margin-left: 20px;
+
             overflow: hidden;
             color: #bbb;
             font-size: 14px;
+            text-overflow: ellipsis;
           }
 
           .name a {

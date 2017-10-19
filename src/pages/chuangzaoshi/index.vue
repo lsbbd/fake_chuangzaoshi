@@ -1,10 +1,23 @@
 <template lang="html">
   <div class="body">
+    <header>
+      <div class="button" :class="{active: sidebarActive}" @click="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-    <the-sidebar></the-sidebar>
+      <div class="logo">
+        <img src="http://chuangzaoshi.com/assets/images/logo_mobile.svg" alt="">
+      </div>
+    </header>
+
+    <aside class="sidebar" :class="{active: sidebarActive}">
+      <the-sidebar></the-sidebar>
+    </aside>
 
     <div class="main">
-      <div class="container">
+      <div class="wrapper">
         <toolbar></toolbar>
       </div>
     </div>
@@ -24,6 +37,13 @@
 
     data() {
       return {
+        sidebarActive: false
+      }
+    },
+
+    methods: {
+      toggleSidebar() {
+        this.sidebarActive = !this.sidebarActive
       }
     },
 
