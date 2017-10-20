@@ -15,7 +15,7 @@ export default [
   },
   {
     name: '前端 Develop',
-    iconName: 'czs-circle',
+    iconName: 'czs-square',
     list: [
       { name: '热门推荐', iconName: 'czs-fire-l' },
       { name: '前端框架', iconName: 'czs-light-l' },
@@ -29,7 +29,7 @@ export default [
   },
   {
     name: '产品 Product',
-    iconName: 'czs-circle',
+    iconName: 'czs-triangle',
     list: [
       { name: '新品推荐', iconName: 'czs-fire-l' },
       { name: '产品资讯', iconName: 'czs-light-l' },
@@ -43,7 +43,7 @@ export default [
   },
   {
     name: '运营 Operate',
-    iconName: 'czs-circle',
+    iconName: 'czs-camber',
     list: [
       { name: '域名注册', iconName: 'czs-light-l' },
       { name: '数据分析', iconName: 'czs-computer-l' },

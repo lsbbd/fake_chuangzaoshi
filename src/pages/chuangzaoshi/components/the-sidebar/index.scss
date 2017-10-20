@@ -90,8 +90,31 @@ aside {
           display: none;
         }
 
-        max-height: 200px;
-        overflow: scroll;
+        @media screen and (max-height: 630px) {
+          display: none;
+        }
+
+        @media screen and (min-height: 630px) {
+          max-height: 200px;
+        }
+
+        @media screen and (min-height: 760px) {
+          max-height: 320px;
+        }
+
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+          height: 4px;
+          width: 4px;
+          background-color: #222;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          width: 2px;
+          background-color: #888;
+        }
 
         li {
           padding: 9px 0;

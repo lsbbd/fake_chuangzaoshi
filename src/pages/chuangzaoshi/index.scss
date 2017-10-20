@@ -75,7 +75,19 @@ a {
     padding-top: 20px;
 
     transition: left .5s;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+      width: 4px;
+      background-color: #222;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 2px;
+      background-color: #888;
+    }
 
     @media screen and (max-width: $xs-max-width) {
       top: 60px;

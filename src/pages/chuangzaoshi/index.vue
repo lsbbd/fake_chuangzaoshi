@@ -12,6 +12,10 @@
         <the-tab></the-tab>
 
         <card-group></card-group>
+        <card-group></card-group>
+        <card-group></card-group>
+        <card-group></card-group>
+        <card-group></card-group>
       </div>
     </div>
   </div>

@@ -5,9 +5,14 @@
   box-sizing: border-box;
 }
 
+[class^="czs-"], [class*=" czs-"] {
+  font-weight: 900;
+}
+
 .card-group {
   padding: 15px;
   margin-top: 20px;
+  margin-bottom: 40px;
   border-radius: 8px;
 
   @media screen and (max-width: $xs-max-width) {
@@ -28,7 +33,7 @@
       padding: 8px 12px;
 
       font-size: 12px;
-      font-weight: bolder;
+      font-weight: 900;
       color: #333;
       background-color: #fff;
       box-shadow: 0 3px 3px rgba(170,170,170,0.2);

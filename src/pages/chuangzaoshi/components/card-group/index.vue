@@ -2,11 +2,11 @@
   <div class="card-group">
     <div class="catalog">
       <div class="wrapper">
-        <span class="czs czs-fire-l">{{ data.catalog }}</span>
+        <span class="czs czs-fire-l">{{ linkList.catalog }}</span>
       </div>
     </div>
     <div class="col-wrapper">
-      <div class="col" v-for="(link, index) in data.list">
+      <div class="col" v-for="(link, index) in appList.list">
         <link-card
           :key="index"
           :name="link.name"
@@ -15,25 +15,41 @@
           :logo="link.logo"
           :watch="link.watch"
           :good="link.good"
-          >
+        >
         </link-card>
+      </div>
+      <!-- <div class="col" v-for="(app, index) in appList.list">
+        <app-card
+          :key="index"
+          :name="app.name"
+          :url="app.url"
+          :desc="app.desc"
+          :logo="app.logo"
+          :platforms="app.platforms"
+          :backgroundColor="app.backgroundColor"
+        >
+      </app-card> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import linkCard from '../link-card/index.vue'
-  import data from './data.js'
+  import linkCard from '../link-card'
+  import appCard from '../app-card/'
+
+  import { linkList, appList } from './data.js'
 
   export default {
     components: {
-      linkCard
+      linkCard,
+      appCard
     },
 
     data() {
       return {
-        data: data
+        linkList: linkList,
+        appList: appList
       }
     },
 
