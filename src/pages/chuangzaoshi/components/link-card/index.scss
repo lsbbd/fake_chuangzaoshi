@@ -1,3 +1,5 @@
+@import "../../../../style/_variable.scss";
+
 a:hover, a:focus, a:active {
   text-decoration: none;
 }
@@ -63,17 +65,20 @@ a:hover, a:focus, a:active {
 
     padding: 10px;
     border-radius: 5px;
+
     background-color: #f9f9f9;
+    box-shadow: 0 3px 3px rgba(170,170,170,0.2);
 
     animation: zoom ease 250ms;
     transform-origin: top left;
 
-    span {
-      color: #171717;
+    // 手机屏幕上隐藏工具提示
+    @media screen and (max-width: %xs-max-width) {
+      display: none;
     }
 
-    .active {
-
+    span {
+      color: #171717;
     }
   }
 
