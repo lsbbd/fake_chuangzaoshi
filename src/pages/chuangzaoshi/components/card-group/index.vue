@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="col-wrapper">
-      <div class="col" v-for="(link, index) in appList.list">
+      <div class="col" v-for="(link, index) in linkList.list">
         <link-card
           :key="index"
           :name="link.name"

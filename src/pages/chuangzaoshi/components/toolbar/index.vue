@@ -24,7 +24,8 @@
 </template>
 
 <script>
-  import data from './data'
+  import { getAdList } from '@/api'
+  // import data from './data'
 
   export default {
     props: {
@@ -47,7 +48,7 @@
     data() {
       return {
         // 广告列表
-        adList: data,
+        adList: [],
 
         style: {
           top: '0'
@@ -59,6 +60,11 @@
     },
 
     methods: {
+      // 获取广告数据
+      fetchData() {
+        this.adList = getAdList()
+      },
+
       // 是否为最后一条广告
       isLastAd() {
         let temp = parseInt(this.style.top)
@@ -110,6 +116,10 @@
       stop() {
         clearInterval(this.timer)
       },
+    },
+
+    created() {
+      this.fetchData()
     },
 
     mounted() {

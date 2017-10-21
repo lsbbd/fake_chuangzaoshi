@@ -1,3 +1,17 @@
+a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 .link-card {
   width: 100%;
   height: 100px;
@@ -18,6 +32,8 @@
     display: flex;
     align-items: center;
 
+    cursor: pointer;
+
     width: 100%;
 
     img {
@@ -32,6 +48,32 @@
       color: #333;
       font-size: 18px;
       font-weight: 500;
+    }
+
+    &:hover {
+      figcaption {
+        color: #38B7EA;
+      }
+    }
+  }
+
+  .tooltip-url {
+    z-index: 10;
+    position: fixed;
+
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+    animation: zoom ease 250ms;
+    transform-origin: top left;
+
+    span {
+      color: #171717;
+    }
+
+    .active {
+
     }
   }
 
