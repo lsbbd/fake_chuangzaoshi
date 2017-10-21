@@ -108,11 +108,13 @@ a:hover, a:focus, a:active {
     }
 
     .watch {
+      cursor: pointer;
       font-size: 14px;
       color: #bbb;
     }
 
     .good {
+      cursor: pointer;
       position: absolute;
       right: 25%;
       font-weight: 500;

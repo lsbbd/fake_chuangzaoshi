@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="link-card">
-    <a :href="url" target="_blank">
+    <a :href="url" target="_blank" @click="incWatch()">
       <figure
         @mousemove="handleMousemove($event)"
         @mouseenter="showToolTip()"
@@ -15,8 +15,14 @@
     </div>
     <h4 class="desc">{{ desc }}</h4>
     <p class="count">
-      <span class="watch czs czs-eye-l">{{ watch }}</span>
-      <span class="good czs czs-thumbs-up-l">{{ good }}</span>
+      <span class="watch czs czs-eye-l">{{ watchCount }}</span>
+      <span
+        :class="{active: fellGood}"
+        class="good czs czs-thumbs-up-l"
+        @click="toggleGood()"
+      >
+        {{ goodCount }}
+      </span>
     </p>
   </div>
 </template>
@@ -46,7 +52,13 @@
         tootipPos: {
           left: '0',
           top: '0'
-        }
+        },
+        // 点赞状态
+        fellGood: false,
+        // 浏览量
+        watchCount: this.watch,
+        // 的赞数
+        goodCount: this.good
       }
     },
 
@@ -65,6 +77,17 @@
       handleMousemove(e) {
         this.tootipPos.left = e.clientX + 15 + 'px'
         this.tootipPos.top = e.clientY + 15 + 'px'
+      },
+
+      // 切换点赞状态
+      toggleGood() {
+        this.fellGood = !this.fellGood
+        this.goodCount += (this.fellGood ? 1 : -1)
+      },
+
+      // 增加阅读量
+      incWatch() {
+        this.watchCount++
       }
     },
 
