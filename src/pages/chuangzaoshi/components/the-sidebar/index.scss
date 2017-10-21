@@ -86,24 +86,31 @@ aside {
       }
 
       .content {
-        @media screen and (max-width: $xs-max-width) {
-          display: none;
-        }
+        max-height: 0;
+        overflow: hidden;
 
-        @media screen and (max-height: 630px) {
-          display: none;
-        }
+        transition: all 300ms;
 
-        @media screen and (min-height: 630px) {
-          max-height: 200px;
-        }
+        &.active {
+          @media screen and (max-width: $xs-max-width) {
+            display: none;
+          }
 
-        @media screen and (min-height: 760px) {
-          max-height: 320px;
-        }
+          @media screen and (max-height: 630px) {
+            display: none;
+          }
 
-        overflow-y: scroll;
-        overflow-x: hidden;
+          @media screen and (min-height: 630px) {
+            max-height: 200px;
+          }
+
+          @media screen and (min-height: 760px) {
+            max-height: 320px;
+          }
+
+          overflow-y: scroll;
+          overflow-x: hidden;
+        }
 
         &::-webkit-scrollbar {
           height: 4px;

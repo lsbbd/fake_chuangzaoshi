@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="link-card">
-    <a :href="url">
+    <a :href="url" target="_blank">
       <figure
         @mousemove="handleMousemove($event)"
         @mouseenter="showToolTip()"

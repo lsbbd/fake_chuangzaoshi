@@ -21,7 +21,8 @@
            </span>
             <h3>{{ tab.name }}</h3>
           </div>
-          <ul class="content" v-if="currentTab === ti">
+          <!-- <ul class="content" v-if="currentTab === ti"> -->
+          <ul class="content" :class="{active: currentTab === ti}">
             <li v-for="(item, ii) in tab.list">
               <a class="czs" :class="item.iconName">{{ item.name }}</a>
             </li>
