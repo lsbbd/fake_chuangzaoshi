@@ -7,7 +7,7 @@
     </div>
 
     <div class="logo">
-      <img src="http://chuangzaoshi.com/assets/images/logo_mobile.svg" alt="">
+      <img src="/static/images/logo_mobile.svg" alt="">
     </div>
   </header>
 </template>
