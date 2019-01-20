@@ -22,31 +22,31 @@
 </template>
 
 <script>
-  import theSidebar from './components/the-sidebar'
-  import toolbar from './components/toolbar'
-  import theHeader from './components/the-header'
-  import theTab from './components/the-tab'
-  import cardGroup from './components/card-group'
+import theSidebar from './components/the-sidebar'
+import toolbar from './components/toolbar'
+import theHeader from './components/the-header'
+import theTab from './components/the-tab'
+import cardGroup from './components/card-group'
 
-  export default {
-    components: {
-      theSidebar,
-      toolbar,
-      theHeader,
-      theTab,
-      cardGroup
-    },
+export default {
+  components: {
+    theSidebar,
+    toolbar,
+    theHeader,
+    theTab,
+    cardGroup
+  },
 
-    data() {
-      return {
-        sidebarActive: false
-      }
-    },
-
-    created() {
-
+  data () {
+    return {
+      sidebarActive: false
     }
+  },
+
+  created () {
+
   }
+}
 </script>
 
 <style lang="scss" src="./index.scss" scoped>

@@ -24,109 +24,106 @@
 </template>
 
 <script>
-  import { getAdList } from '@/api'
-  // import data from './data'
+import { getAdList } from '@/api'
+// import data from './data'
 
-  export default {
-    props: {
-      // 标题
-      title: {
-        type: Object
-      },
-      // 是否自动播放
-      autoplay: {
-        type: Boolean,
-        default: true
-      },
-      // 播放时间间隔
-      interval: {
-        type: Number,
-        default: 5000
-      }
+export default {
+  props: {
+    // 标题
+    title: {
+      type: Object
     },
-
-    data() {
-      return {
-        // 广告列表
-        adList: [],
-
-        style: {
-          top: '0'
-        },
-
-        // 计时器
-        timer: 0
-      }
+    // 是否自动播放
+    autoplay: {
+      type: Boolean,
+      default: true
     },
-
-    methods: {
-      // 获取广告数据
-      fetchData() {
-        this.adList = getAdList()
-      },
-
-      // 是否为最后一条广告
-      isLastAd() {
-        let temp = parseInt(this.style.top)
-        let totalHeight = this.adList.length * 20
-
-        return (temp === -totalHeight + 20) ? true : false
-      },
-
-      // 是否为第一条广告
-      isFirstAd() {
-        let temp = parseInt(this.style.top)
-
-        return (temp === 0) ? true : false
-      },
-
-      // 切换到下一条广告
-      nextAd() {
-        let temp = parseInt(this.style.top)
-
-        if (!this.isLastAd())
-          this.style.top = (temp - 20) + 'px'
-      },
-
-      // 切换到上一条广告
-      preAd() {
-        let temp = parseInt(this.style.top)
-
-        if (!this.isFirstAd())
-          this.style.top = (temp + 20) + 'px'
-      },
-
-      // 回到第一条广告
-      backToFirstAd() {
-        this.style.top = 0
-      },
-
-      // 开始自动滚动
-      start() {
-        this.timer = setInterval(() => {
-          if (this.isLastAd()) {
-            this.backToFirstAd()
-          } else {
-            this.nextAd()
-          }
-        }, this.interval)
-      },
-
-      // 停止滚动
-      stop() {
-        clearInterval(this.timer)
-      },
-    },
-
-    created() {
-      this.fetchData()
-    },
-
-    mounted() {
-      if (this.autoplay)
-        this.start()
+    // 播放时间间隔
+    interval: {
+      type: Number,
+      default: 5000
     }
+  },
+
+  data () {
+    return {
+      // 广告列表
+      adList: [],
+
+      style: {
+        top: '0'
+      },
+
+      // 计时器
+      timer: 0
+    }
+  },
+
+  methods: {
+    // 获取广告数据
+    fetchData () {
+      this.adList = getAdList()
+    },
+
+    // 是否为最后一条广告
+    isLastAd () {
+      let temp = parseInt(this.style.top)
+      let totalHeight = this.adList.length * 20
+
+      return (temp === -totalHeight + 20)
+    },
+
+    // 是否为第一条广告
+    isFirstAd () {
+      let temp = parseInt(this.style.top)
+
+      return (temp === 0)
+    },
+
+    // 切换到下一条广告
+    nextAd () {
+      let temp = parseInt(this.style.top)
+
+      if (!this.isLastAd()) { this.style.top = (temp - 20) + 'px' }
+    },
+
+    // 切换到上一条广告
+    preAd () {
+      let temp = parseInt(this.style.top)
+
+      if (!this.isFirstAd()) { this.style.top = (temp + 20) + 'px' }
+    },
+
+    // 回到第一条广告
+    backToFirstAd () {
+      this.style.top = 0
+    },
+
+    // 开始自动滚动
+    start () {
+      this.timer = setInterval(() => {
+        if (this.isLastAd()) {
+          this.backToFirstAd()
+        } else {
+          this.nextAd()
+        }
+      }, this.interval)
+    },
+
+    // 停止滚动
+    stop () {
+      clearInterval(this.timer)
+    }
+  },
+
+  created () {
+    this.fetchData()
+  },
+
+  mounted () {
+    if (this.autoplay) { this.start() }
   }
+}
 </script>
 
 <style lang="scss" src="./index.scss" scoped>

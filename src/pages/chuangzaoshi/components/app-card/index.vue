@@ -22,43 +22,43 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      // 应用名
-      name: { type: String },
-      platforms: { type: Array },
-      logo: { type: String },
-      desc: { type: String },
-      url: { type: String },
-      backgroundColor: { type: String }
-    },
+export default {
+  props: {
+    // 应用名
+    name: { type: String },
+    platforms: { type: Array },
+    logo: { type: String },
+    desc: { type: String },
+    url: { type: String },
+    backgroundColor: { type: String }
+  },
 
-    data() {
-      return {
-        platformsIcon: []
+  data () {
+    return {
+      platformsIcon: []
+    }
+  },
+
+  methods: {
+
+  },
+
+  created () {
+    if (this.platforms) {
+      if (this.platforms.indexOf('linux') !== -1) {
+        this.platformsIcon.push('czs-linux')
       }
-    },
 
-    methods: {
+      if (this.platforms.indexOf('macos') !== -1) {
+        this.platformsIcon.push('czs-apple')
+      }
 
-    },
-
-    created() {
-      if (this.platforms) {
-        if (this.platforms.indexOf('linux') !== -1) {
-          this.platformsIcon.push('czs-linux')
-        }
-
-        if (this.platforms.indexOf('macos') !== -1) {
-          this.platformsIcon.push('czs-apple')
-        }
-
-        if (this.platforms.indexOf('windows') !== -1) {
-          this.platformsIcon.push('czs-microsoft')
-        }
+      if (this.platforms.indexOf('windows') !== -1) {
+        this.platformsIcon.push('czs-microsoft')
       }
     }
   }
+}
 </script>
 
 <style lang="scss" src="./index.scss" scoped>

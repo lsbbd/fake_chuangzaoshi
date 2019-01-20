@@ -13,5 +13,5 @@ export default [
     desc: '关注公众号SA九五二七，参与一天一主题公益活动',
     name: '百图记',
     url: ''
-  },
+  }
 ]

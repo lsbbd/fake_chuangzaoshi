@@ -39,23 +39,23 @@
 </template>
 
 <script>
-  import data from './data'
+import data from './data'
 
-  export default {
-    data() {
-      return {
-        data: data,
-        // 当前激活 tab
-        currentTab: 0
-      }
-    },
+export default {
+  data () {
+    return {
+      data: data,
+      // 当前激活 tab
+      currentTab: 0
+    }
+  },
 
-    methods: {
-      toggleTab(index) {
-        this.currentTab = index
-      }
+  methods: {
+    toggleTab (index) {
+      this.currentTab = index
     }
   }
+}
 </script>
 
 <style lang="scss" src="./index.scss" scoped>

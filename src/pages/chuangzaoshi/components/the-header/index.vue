@@ -13,22 +13,22 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        // 侧边栏可见性
-        sidebarActive: false
-      }
-    },
+export default {
+  data () {
+    return {
+      // 侧边栏可见性
+      sidebarActive: false
+    }
+  },
 
-    methods: {
-      toggleSidebar() {
-        this.sidebarActive = !this.sidebarActive
-        this.$parent.sidebarActive = !this.$parent.sidebarActive
-      }
-    },
-
+  methods: {
+    toggleSidebar () {
+      this.sidebarActive = !this.sidebarActive
+      this.$parent.sidebarActive = !this.$parent.sidebarActive
+    }
   }
+
+}
 </script>
 
 <style lang="scss" src="./index.scss" scoped>

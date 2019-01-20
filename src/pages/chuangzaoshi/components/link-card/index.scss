@@ -73,7 +73,7 @@ a:hover, a:focus, a:active {
     transform-origin: top left;
 
     // 手机屏幕上隐藏工具提示
-    @media screen and (max-width: %xs-max-width) {
+    @media screen and (max-width: $xs-max-width) {
       display: none;
     }
 

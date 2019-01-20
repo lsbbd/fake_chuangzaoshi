@@ -14,18 +14,18 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        tabs: [
-          { name: '书签', iconName: 'czs-bookmark-l'},
-          { name: '利器', iconName: 'czs-wrench-l'}
-        ],
+export default {
+  data () {
+    return {
+      tabs: [
+        { name: '书签', iconName: 'czs-bookmark-l' },
+        { name: '利器', iconName: 'czs-wrench-l' }
+      ],
 
-        currentTab: 0
-      }
+      currentTab: 0
     }
   }
+}
 </script>
 
 <style lang="scss" src="./index.scss" scoped>

@@ -35,27 +35,27 @@
 </template>
 
 <script>
-  import linkCard from '../link-card'
-  import appCard from '../app-card/'
+import linkCard from '../link-card'
+import appCard from '../app-card/'
 
-  import { linkList, appList } from './data.js'
+import { linkList, appList } from './data.js'
 
-  export default {
-    components: {
-      linkCard,
-      appCard
-    },
+export default {
+  components: {
+    linkCard,
+    appCard
+  },
 
-    data() {
-      return {
-        linkList: linkList,
-        appList: appList
-      }
-    },
-
-    created() {
+  data () {
+    return {
+      linkList: linkList,
+      appList: appList
     }
+  },
+
+  created () {
   }
+}
 </script>
 
 <style lang="scss" src="./index.scss" scoped>

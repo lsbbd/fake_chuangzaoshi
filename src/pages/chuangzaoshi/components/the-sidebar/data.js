@@ -10,7 +10,7 @@ export default [
       { name: '在线工具', iconName: 'czs-briefcase-l' },
       { name: 'icon图标', iconName: 'czs-medal-l' },
       { name: '设计素材', iconName: 'czs-folder-l' },
-      { name: '图库素材', iconName: 'czs-image-l' },
+      { name: '图库素材', iconName: 'czs-image-l' }
     ]
   },
   {
@@ -24,7 +24,7 @@ export default [
       { name: '个人框架', iconName: 'czs-briefcase-l' },
       { name: '在线编程', iconName: 'czs-medal-l' },
       { name: '代码托管', iconName: 'czs-folder-l' },
-      { name: '构建工具', iconName: 'czs-image-l' },
+      { name: '构建工具', iconName: 'czs-image-l' }
     ]
   },
   {
@@ -38,7 +38,7 @@ export default [
       { name: '协同工作', iconName: 'czs-briefcase-l' },
       { name: '文档编辑', iconName: 'czs-medal-l' },
       { name: '云盘储存', iconName: 'czs-folder-l' },
-      { name: '趣味产品', iconName: 'czs-image-l' },
+      { name: '趣味产品', iconName: 'czs-image-l' }
     ]
   },
   {
@@ -51,7 +51,7 @@ export default [
       { name: '数据收集', iconName: 'czs-briefcase-l' },
       { name: '新媒工具', iconName: 'czs-medal-l' },
       { name: '网站收录', iconName: 'czs-folder-l' },
-      { name: 'ASO优化', iconName: 'czs-image-l' },
+      { name: 'ASO优化', iconName: 'czs-image-l' }
     ]
-  },
+  }
 ]
